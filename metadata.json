@@ -1,0 +1,6 @@
+{
+  "name": "Interactive ECG Medical Device Simulator",
+  "description": "Educational biomedical engineering web application featuring a 7-stage rotary knowledge wheel, interactive 3D clinical ECG hardware explorer, and real-time McSharry biophysical ECG signal processing simulator.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

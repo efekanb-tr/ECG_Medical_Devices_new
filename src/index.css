@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #FFFFFF;
+    color: #09318D;
+    overflow-x: hidden;
+  }
+
+  code, pre, .font-mono {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Custom Range Input Styling in Deep Navy (#09318D) & Soft Pink (#FD91CC) */
+input[type="range"].ecg-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  background: rgba(9, 49, 141, 0.14);
+  border-radius: 999px;
+  outline: none;
+  transition: background 150ms ease;
+}
+
+input[type="range"].ecg-slider:hover {
+  background: rgba(9, 49, 141, 0.24);
+}
+
+input[type="range"].ecg-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #09318D;
+  border: 3px solid #FD91CC;
+  cursor: pointer;
+  transition: transform 150ms cubic-bezier(0.16, 1, 0.3, 1), background-color 150ms ease;
+}
+
+input[type="range"].ecg-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.12);
+  background: #09318D;
+}
+
+input[type="range"].ecg-slider:focus-visible::-webkit-slider-thumb {
+  box-shadow: 0 0 0 3px rgba(253, 145, 204, 0.55);
+}
+
+input[type="range"].ecg-slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #09318D;
+  border: 3px solid #FD91CC;
+  cursor: pointer;
+  transition: transform 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Textbook-Style Mathematical Fraction & Summation Formatting */
+.math-fraction {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  line-height: 1.2;
+}
+
+.math-fraction > .math-num {
+  border-bottom: 1.5px solid #09318D;
+  padding: 0 0.3rem 0.1rem;
+  text-align: center;
+}
+
+.math-fraction > .math-den {
+  padding: 0.1rem 0.3rem 0;
+  text-align: center;
+}
+
+.math-sum-group {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  vertical-align: middle;
+  margin: 0 0.2rem;
+  line-height: 1;
+}
+
